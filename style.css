@@ -1,195 +1,115 @@
-let currentLang = "pt";
-const CONTENT = {
-    pt: {
-        nav: { about: "O Nosso Espaço", services: "Menu", contacts: "Reservas", cta: "Ligar" },
-        hero: { tag: "Caldelas • Brunch & Coffee", static: "O seu melhor", titles: ["Brunch.", "Momento.", "Sabor."], sub: "Desfrute de uma experiência única com pratos preparados para satisfazer o seu paladar num ambiente acolhedor.", btnMenu: "Ver Menu", btnBook: "Reservar Mesa" },
-        services: { over: "O Nosso Menu", title: "Sugestões Dom José", items: [
-            { t: "Ovo Red Velvet", d: "Chocolate de leite, frosting de queijo creme e bolo veludo.", img: "./images/a.jpg" },
-            { t: "Ovo Ferrero Rocher", d: "Chocolate de leite, creme de avelã, avelãs tostadas e bombom.", img: "./images/b.jpg" },
-            { t: "Ovo Kinder White", d: "Ganache de chocolate branco, creme de avelã e Kinder Bueno.", img: "./images/c.jpg" },
-            { t: "Ovo KitKat Brownie", d: "Brownie, creme de baunilha, mousse de chocolate, KitKat e estrelas.", img: "./images/d.jpg" },
-            { t: "Panquecas Lotus Biscoff", d: "Panquecas, creme Biscoff, bolacha Lotus, banana e gelado de baunilha.", img: "./images/e.jpg" },
-            { t: "Bowl de Pitaia", d: "Pitaia, granola, kiwi, banana, morangos e sementes de abóbora.", img: "./images/f.jpg" },
-            { t: "Panquecas com Picolé", d: "Panquecas, chocolate, picolé, morango, banana, chantilly e avelãs.", img: "./images/g.jpg" },
-            { t: "Milkshake de Chocolate", d: "Leite, chocolate, chantilly, cacau em pó e um wafer.", img: "./images/h.jpg" },
-            { t: "Cookies de Kinder", d: "Massa de chocolate, creme de avelã, chocolate derretido e Kinder.", img: "./images/i.jpg" },
-            { t: "Cookies de M&M", d: "Massa de cookie, gotas de chocolate, cobertura de chocolate e M&Ms.", img: "./images/j.jpg" },
-            { t: "Bagel de Bacon", d: "Bagel de gergelim, bacon, ovos mexidos, abacate e molho especial.", img: "./images/k.jpg" }
-        ]},
-        about: { over: "Sobre o Dom José", intro: "Uma tradição de sabor e hospitalidade em Caldelas.", desc: ["Fundado com a paixão pela gastronomia de qualidade, o Brunch Dom José é mais do que um restaurante; é um ponto de encontro onde o design moderno se funde com os sabores tradicionais.", "Utilizamos apenas ingredientes locais e frescos, garantindo que cada prato que sai da nossa cozinha conte uma história de dedicação. Venha conhecer o nosso espaço e deixe-se surpreender."] },
-        contacts: { title: "Faça a sua Reserva", sub: "Estamos na R. António de Barros 68, Caldelas. Esperamos por si para uma refeição inesquecível.", hoursTitle: "Horário", btnPhone: "Ligar Agora", btnMap: "Ver Mapa", socialCta: "Siga-nos para acompanhar todas as novidades e momentos diários.", hours: [{d:"Seg-Sáb", t:"07-20:30h"},{d:"Dom", t:"07:30-19:30h"}] },
-        footer: "© 2026 BRUNCH DOM JOSÉ. CALDELAS."
-    },
-    en: {
-        nav: { about: "Our Space", services: "Menu", contacts: "Bookings", cta: "Call" },
-        hero: { tag: "Caldelas • Brunch & Coffee", static: "Your best", titles: ["Brunch.", "Moment.", "Flavor."], sub: "Enjoy a unique experience with dishes prepared to satisfy your palate in a cozy and welcoming environment.", btnMenu: "View Menu", btnBook: "Book a Table" },
-        services: { over: "Our Menu", title: "Dom José Suggestions", items: [
-            { t: "Red Velvet Egg", d: "Milk chocolate, cream cheese frosting, and red velvet cake crumbs.", img: "./images/a.jpg" },
-            { t: "Ferrero Rocher Egg", d: "Milk chocolate, hazelnut cream, toasted hazelnuts, and Ferrero Rocher.", img: "./images/b.jpg" },
-            { t: "Kinder White Egg", d: "White chocolate ganache, hazelnut cream, and Kinder Bueno.", img: "./images/c.jpg" },
-            { t: "KitKat Brownie Egg", d: "Brownie, vanilla cream, chocolate mousse, KitKat, and stars.", img: "./images/d.jpg" },
-            { t: "Lotus Biscoff Pancakes", d: "Pancakes, Biscoff cream, Lotus biscuits, banana, and vanilla ice cream.", img: "./images/e.jpg" },
-            { t: "Pitaia Bowl", d: "Pitaia, granola, kiwi, banana, strawberries, and pumpkin seeds.", img: "./images/f.jpg" },
-            { t: "Pancakes with Popsicle", d: "Pancakes, chocolate, popsicle, strawberries, banana, whipped cream, and hazelnuts.", img: "./images/g.jpg" },
-            { t: "Chocolate Milkshake", d: "Milk, chocolate, whipped cream, cocoa powder, and a wafer.", img: "./images/h.jpg" },
-            { t: "Kinder Cookies", d: "Chocolate dough, hazelnut cream, melted chocolate, and Kinder.", img: "./images/i.jpg" },
-            { t: "M&M Cookies", d: "Cookie dough, chocolate chips, chocolate coating, and M&Ms.", img: "./images/j.jpg" },
-            { t: "Brunch Bagel", d: "Toasted bagel, poached egg, cheddar cheese, deli meat, and arugula.", img: "./images/k.jpg" }
-        ]},
-        about: { over: "About Dom José", intro: "A tradition of flavor and hospitality in Caldelas.", desc: ["Founded with a passion for quality gastronomy, Brunch Dom José is more than just a restaurant; it's a meeting point where modern design merges with traditional flavors.", "We use only fresh local ingredients, ensuring that every dish leaving our kitchen tells a story of dedication. Come visit our space and let us surprise you."] },
-        contacts: { title: "Make a Reservation", sub: "We are at R. António de Barros 68, Caldelas. We look forward to seeing you for an unforgettable meal.", hoursTitle: "Opening Hours", btnPhone: "Call Now", btnMap: "View Map", socialCta: "Follow us to keep up with all the news and daily moments.", hours: [{d:"Mon-Sat", t:"07am-8:30pm"},{d:"Sun", t:"07:30am-07:30pm"}] },
-        footer: "© 2026 BRUNCH DOM JOSÉ. CALDELAS."
-    }
-};
+/* ── RESET & CORE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; font-size: 16px; }
 
-function updateLanguage(code) {
-    currentLang = code;
-    const d = CONTENT[code];
-    
-    document.getElementById('lang-menu').classList.add('hidden');
-
-    const navLinks = `
-        <li><a href="#about" class="nav-link" onclick="closeMobileMenu()">${d.nav.about}</a></li>
-        <li><a href="#services" class="nav-link" onclick="closeMobileMenu()">${d.nav.services}</a></li>
-        <li><a href="#contacts" class="nav-link" onclick="closeMobileMenu()">${d.nav.contacts}</a></li>
-    `;
-    document.getElementById('nav-list').innerHTML = navLinks;
-    
-    document.getElementById('cta-nav-text').textContent = d.nav.cta;
-    document.getElementById('active-lang').textContent = code.toUpperCase();
-    document.getElementById('active-flag').textContent = code === 'pt' ? '🇵🇹' : '🇬🇧';
-    
-    document.getElementById('hero-tag').textContent = d.hero.tag;
-    document.getElementById('hero-static').textContent = d.hero.static;
-    document.getElementById('hero-sub').textContent = d.hero.sub;
-    document.getElementById('hero-cta-text').textContent = d.hero.btnBook;
-    document.getElementById('hero-menu-text').textContent = d.hero.btnMenu;
-
-    const track = document.getElementById('gallery-track');
-    const itemsHtml = d.services.items.map(i => `<div class="menu-item"><img src="${i.img}"><h4>${i.t}</h4><p>${i.d}</p></div>`).join('');
-    track.innerHTML = itemsHtml + itemsHtml + itemsHtml;
-
-    document.getElementById('about-mini').textContent = d.about.over;
-    document.getElementById('about-intro').textContent = d.about.intro;
-    document.getElementById('about-desc').innerHTML = d.about.desc.map(p => `<p>${p}</p>`).join('');
-
-    document.getElementById('contact-title').textContent = d.contacts.title;
-    document.getElementById('contact-sub').textContent = d.contacts.sub;
-    document.getElementById('hours-title').textContent = d.contacts.hoursTitle;
-    document.getElementById('hours-box').innerHTML = d.contacts.hours.map(h => `<div class="flex justify-between py-3 border-b border-orange-50"><span class="f-xs font-bold uppercase opacity-50">${h.d}</span><span class="f-sm font-black">${h.t}</span></div>`).join('');
-    
-    document.getElementById('social-cta').textContent = d.contacts.socialCta;
-
-    document.getElementById('contact-pills').innerHTML = `
-        <a href="tel:253471226" class="px-8 py-4 bg-[var(--primary)] text-white rounded-full font-bold f-xs uppercase flex items-center justify-center gap-2 text-center w-full sm:w-auto">
-          <i data-lucide="phone" class="w-4 h-4"></i> ${d.contacts.btnPhone}
-        </a>
-        <a href="https://maps.app.goo.gl/PYqBNZkXFCboJncV7" target="_blank" class="px-8 py-4 bg-white border border-orange-100 rounded-full font-bold f-xs uppercase flex items-center justify-center gap-2 text-center w-full sm:w-auto">
-          <i data-lucide="map-pin" class="w-4 h-4"></i> ${d.contacts.btnMap}
-        </a>
-    `;
-
-    document.getElementById('footer-copy').textContent = d.footer;
-    initRotator();
-    lucide.createIcons();
-}
-
-function closeMobileMenu() {
-    document.getElementById('nav-list').classList.remove('mobile-active');
-}
-
-function initRotator() {
-    const titles = CONTENT[currentLang].hero.titles;
-    const container = document.getElementById('title-rotator');
-    container.innerHTML = titles.map(t => `<span class="title-item">${t}</span>`).join('');
-    const items = container.querySelectorAll('.title-item');
-    let idx = 0; gsap.set(items[0], { opacity: 1, y: 0 });
-    if(window.rotatorTimer) clearInterval(window.rotatorTimer);
-    window.rotatorTimer = setInterval(() => {
-        gsap.to(items[idx], { y: "-100%", opacity: 0, duration: 0.6 });
-        idx = (idx + 1) % items.length;
-        gsap.fromTo(items[idx], { y: "100%", opacity: 0 }, { y: "0%", opacity: 1, duration: 0.6 });
-    }, 3000);
-}
-
-function initMenuScroll() {
-    const track = document.getElementById('gallery-track');
-    const slider = document.getElementById('menu-gallery');
-    let scrollPos = 0, isPaused = false, isDragging = false, startX, scrollLeftAtStart;
-    
-    function step() { 
-        if(!isPaused && !isDragging) { 
-            scrollPos += 0.8; 
-            const halfWidth = track.scrollWidth / 3; 
-            if(scrollPos >= halfWidth * 2) scrollPos = halfWidth; 
-            track.style.transform = `translate3d(-${scrollPos}px, 0, 0)`; 
-        } 
-        requestAnimationFrame(step); 
+    :root {
+      --primary: #A77C59; 
+      --bg-base: #FFFBFA;
+      --radius: 32px;
+      --max-w: 1200px; 
+      
+      --text-xs: clamp(0.75rem, 0.8vw, 0.875rem); 
+      --text-sm: clamp(0.875rem, 1vw, 1rem);      
+      --text-base: clamp(1rem, 1.2vw, 1.125rem);  
+      --text-lg: clamp(1.125rem, 1.5vw, 1.5rem);  
+      --text-xl: clamp(1.5rem, 2vw, 2rem);        
+      --text-display: clamp(3.5rem, 8vw, 6rem); 
     }
 
-    // Mouse Events
-    slider.addEventListener('mousedown', (e) => { 
-        isDragging = true; isPaused = true; 
-        startX = e.pageX - slider.offsetLeft; 
-        scrollLeftAtStart = scrollPos; 
-        slider.style.cursor = 'grabbing'; 
-    });
-
-    // Touch Events for Mobile
-    slider.addEventListener('touchstart', (e) => {
-        isDragging = true; isPaused = true;
-        startX = e.touches[0].pageX - slider.offsetLeft;
-        scrollLeftAtStart = scrollPos;
-    });
-
-    window.addEventListener('mousemove', (e) => handleMove(e.pageX));
-    window.addEventListener('touchmove', (e) => handleMove(e.touches[0].pageX));
-
-    function handleMove(currentX) {
-        if (!isDragging) return;
-        const x = currentX - slider.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        scrollPos = scrollLeftAtStart - walk;
-        const halfWidth = track.scrollWidth / 3;
-        if(scrollPos < halfWidth) scrollPos += halfWidth;
-        if(scrollPos > halfWidth * 2) scrollPos -= halfWidth;
-        track.style.transform = `translate3d(-${scrollPos}px, 0, 0)`;
+    body { 
+      font-family: 'Inter', sans-serif; 
+      color: #431407; 
+      background: linear-gradient(180deg, rgba(167,124,89,0.04) 0%, var(--bg-base) 100vh) no-repeat;
+      background-color: var(--bg-base);
+      background-attachment: fixed;
+      line-height: 1.6; 
+      font-size: var(--text-base); 
+      -webkit-font-smoothing: antialiased; 
     }
 
-    const endDrag = () => { isDragging = false; isPaused = false; slider.style.cursor = 'grab'; };
-    window.addEventListener('mouseup', endDrag);
-    window.addEventListener('touchend', endDrag);
+    h1, h2, h3 { font-family: 'Playfair Display', serif; text-wrap: balance; }
+    p, span, li { text-wrap: pretty; }
 
-    requestAnimationFrame(step);
-}
+    .f-xs { font-size: var(--text-xs); }
+    .f-sm { font-size: var(--text-sm); }
+    .f-base { font-size: var(--text-base); }
+    .f-lg { font-size: var(--text-lg); }
+    .f-xl { font-size: var(--text-xl); }
+    .f-display { font-size: var(--text-display); line-height: 1; letter-spacing: -0.04em; font-weight: 700; }
+    .overline-text { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.25em; font-weight: 800; color: var(--primary); }
 
-window.onload = () => {
-    // Scroll Indicator logic
-    window.addEventListener('scroll', () => {
-        const indicator = document.getElementById('scroll-indicator');
-        if (window.scrollY > 50) {
-            indicator.classList.add('opacity-0');
-        } else {
-            indicator.classList.remove('opacity-0');
-        }
-    });
+    /* ── NAV ── */
+    #nav { 
+      position: fixed; top: 16px; left: 50%; transform: translateX(-50%) translateY(-20px); z-index: 9999; 
+      height: 72px; width: calc(100% - 32px); max-width: var(--max-w);
+      display: flex; justify-content: space-between; align-items: center; 
+      padding: 0 24px; 
+      background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,251,250,0.85) 100%);
+      backdrop-filter: blur(20px); 
+      border: 1px solid rgba(167, 124, 89, 0.15); border-radius: 100px; opacity: 0;
+      box-shadow: 0 10px 40px -10px rgba(167, 124, 89, 0.15);
+    }
+    @media (min-width: 768px) { #nav { display: grid; grid-template-columns: 1fr auto 1fr; top: 24px; } }
 
-    // Mobile Menu Toggle
-    document.getElementById('mobile-menu-btn').onclick = (e) => {
-        e.stopPropagation();
-        document.getElementById('nav-list').classList.toggle('mobile-active');
-    };
+    .logo-container { height: 48px; width: 48px; display: flex; align-items: center; justify-content: center; }
+    .logo-container img { max-height: 100%; max-width: 100%; object-fit: contain; }
 
-    document.getElementById('lang-menu').innerHTML = `<button onclick="updateLanguage('pt')" class="block w-full px-4 py-3 text-left hover:bg-orange-50 f-xs font-bold border-b border-orange-50">PT (Português)</button><button onclick="updateLanguage('en')" class="block w-full px-4 py-3 text-left hover:bg-orange-50 f-xs font-bold">EN (English)</button>`;
-    document.getElementById('lang-btn').onclick = (e) => { e.stopPropagation(); document.getElementById('lang-menu').classList.toggle('hidden'); };
-    
-    window.onclick = () => {
-        document.getElementById('lang-menu').classList.add('hidden');
-        document.getElementById('nav-list').classList.remove('mobile-active');
-    };
-    
-    updateLanguage('pt');
-    initMenuScroll();
-    gsap.to("#nav", { opacity: 1, y: 0, duration: 1 });
-    ScrollTrigger.batch(".reveal", { onEnter: b => gsap.to(b, { opacity: 1, y: 0, duration: 0.8, stagger: 0.1 }) });
-};
+    .nav-links { display: flex; gap: 2rem; justify-content: center; }
+    .nav-link { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #431407; transition: color 0.3s; }
+    .nav-link:hover { color: var(--primary); }
+
+    .cta-button {
+      position: relative; display: inline-flex; align-items: center; justify-content: center;
+      background: var(--primary); color: white; height: 42px; padding: 0 24px; border-radius: 100px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;
+      text-align: center;
+    }
+
+    section { padding: 100px 24px; position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .reveal { opacity: 0; transform: translateY(30px); } 
+
+    /* ── HERO ── */
+    #hero { min-height: 95vh; justify-content: center; background: radial-gradient(circle at center, rgba(167,124,89,0.06) 0%, transparent 70%); }
+    .title-wrapper { position: relative; display: inline-block; width: 100%; height: 1.1em; overflow: hidden; color: var(--primary); vertical-align: top; }
+    .title-item { position: absolute; left: 0; right: 0; width: 100%; text-align: center; opacity: 0; transform: translateY(100%); }
+
+    /* ── GALLERY SLIDER ── */
+    #menu-gallery { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden; padding: 40px 0; cursor: grab; user-select: none; }
+    #menu-gallery:active { cursor: grabbing; }
+    .gallery-container { display: flex; gap: 32px; width: max-content; padding: 0 40px; will-change: transform; }
+    .menu-item { width: clamp(280px, 25vw, 380px); flex-shrink: 0; text-align: left; pointer-events: none; }
+    .menu-item img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 24px; margin-bottom: 20px; box-shadow: 0 20px 40px -10px rgba(67, 20, 7, 0.15); }
+    .menu-item h4 { font-family: 'Playfair Display', serif; font-size: 1.75rem; color: #431407; font-weight: 700; }
+    .menu-item p { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(67, 20, 7, 0.6); margin-top: 6px; font-weight: 400; }
+
+    /* ── ABOUT ── */
+    .about-image-placeholder { 
+      width: 100%; 
+      aspect-ratio: 21/9; 
+      background: #e5e5e5; 
+      border-radius: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      overflow: hidden;
+      margin-bottom: 60px;
+    }
+    .about-image-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+
+    .btn-secondary { border: 2px solid var(--primary); color: var(--primary); padding: 1.25rem 2.5rem; border-radius: 100px; font-weight: 700; transition: all 0.3s ease; display: flex; align-items: center; gap: 10px; text-align: center; justify-content: center; }
+    .btn-secondary:hover { background: var(--primary); color: white; transform: translateY(-2px); }
+
+    #nav-list.mobile-active {
+      display: flex !important;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background: white;
+      padding: 20px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      border: 1px solid rgba(167, 124, 89, 0.1);
+      z-index: 100;
+    }
