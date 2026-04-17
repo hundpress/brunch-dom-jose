@@ -8,7 +8,13 @@
             { t: "Ovo Ferrero Rocher", d: "Chocolate de leite, creme de avelã, avelãs tostadas e bombom.", img: "./images/b.jpg" },
             { t: "Ovo Kinder White", d: "Ganache de chocolate branco, creme de avelã e Kinder Bueno.", img: "./images/c.jpg" },
             { t: "Ovo KitKat Brownie", d: "Brownie, creme de baunilha, mousse de chocolate, KitKat e estrelas.", img: "./images/d.jpg" },
-            { t: "Panquecas Lotus Biscoff", d: "Panquecas, creme Biscoff, bolacha Lotus, banana e gelado de baunilha.", img: "./images/e.jpg" }
+            { t: "Panquecas Lotus Biscoff", d: "Panquecas, creme Biscoff, bolacha Lotus, banana e gelado de baunilha.", img: "./images/e.jpg" },
+            { t: "Bowl de Pitaia", d: "Pitaia, granola, kiwi, banana, morangos e sementes de abóbora.", img: "./images/f.jpg" },
+            { t: "Panquecas com Picolé", d: "Panquecas, chocolate, picolé, morango, banana, chantilly e avelãs.", img: "./images/g.jpg" },
+            { t: "Milkshake de Chocolate", d: "Leite, chocolate, chantilly, cacau em pó e um wafer.", img: "./images/h.jpg" },
+            { t: "Cookies de Kinder", d: "Massa de chocolate, creme de avelã, chocolate derretido e Kinder.", img: "./images/i.jpg" },
+            { t: "Cookies de M&M", d: "Massa de cookie, gotas de chocolate, cobertura de chocolate e M&Ms.", img: "./images/j.jpg" },
+            { t: "Bagel de Bacon", d: "Bagel de gergelim, bacon, ovos mexidos, abacate e molho especial.", img: "./images/k.jpg" }
         ]},
         about: { over: "Sobre o Dom José", intro: "Uma tradição de sabor e hospitalidade em Caldelas.", desc: ["Fundado com a paixão pela gastronomia de qualidade, o Brunch Dom José é mais do que um restaurante; é um ponto de encontro onde o design moderno se funde com os sabores tradicionais.", "Utilizamos apenas ingredientes locais e frescos, garantindo que cada prato que sai da nossa cozinha conte uma história de dedicação. Venha conhecer o nosso espaço e deixe-se surpreender."] },
         contacts: { title: "Faça a sua Reserva", sub: "Estamos na R. António de Barros 68, Caldelas. Esperamos por si para uma refeição inesquecível.", hoursTitle: "Horário", btnPhone: "Ligar Agora", btnMap: "Ver Mapa", socialCta: "Siga-nos para acompanhar todas as novidades e momentos diários.", hours: [{d:"Seg-Sáb", t:"07-20:30h"},{d:"Dom", t:"07:30-19:30h"}] },
@@ -22,7 +28,13 @@
             { t: "Ferrero Rocher Egg", d: "Milk chocolate, hazelnut cream, toasted hazelnuts, and Ferrero Rocher.", img: "./images/b.jpg" },
             { t: "Kinder White Egg", d: "White chocolate ganache, hazelnut cream, and Kinder Bueno.", img: "./images/c.jpg" },
             { t: "KitKat Brownie Egg", d: "Brownie, vanilla cream, chocolate mousse, KitKat, and stars.", img: "./images/d.jpg" },
-            { t: "Lotus Biscoff Pancakes", d: "Pancakes, Biscoff cream, Lotus biscuits, banana, and vanilla ice cream.", img: "./images/e.jpg" }
+            { t: "Lotus Biscoff Pancakes", d: "Pancakes, Biscoff cream, Lotus biscuits, banana, and vanilla ice cream.", img: "./images/e.jpg" },
+            { t: "Pitaia Bowl", d: "Pitaia, granola, kiwi, banana, strawberries, and pumpkin seeds.", img: "./images/f.jpg" },
+            { t: "Pancakes with Popsicle", d: "Pancakes, chocolate, popsicle, strawberries, banana, whipped cream, and hazelnuts.", img: "./images/g.jpg" },
+            { t: "Chocolate Milkshake", d: "Milk, chocolate, whipped cream, cocoa powder, and a wafer.", img: "./images/h.jpg" },
+            { t: "Kinder Cookies", d: "Chocolate dough, hazelnut cream, melted chocolate, and Kinder.", img: "./images/i.jpg" },
+            { t: "M&M Cookies", d: "Cookie dough, chocolate chips, chocolate coating, and M&Ms.", img: "./images/j.jpg" },
+            { t: "Brunch Bagel", d: "Toasted bagel, poached egg, cheddar cheese, deli meat, and arugula.", img: "./images/k.jpg" }
         ]},
         about: { over: "About Dom José", intro: "A tradition of flavor and hospitality in Caldelas.", desc: ["Founded with a passion for quality gastronomy, Brunch Dom José is more than just a restaurant; it's a meeting point where modern design merges with traditional flavors.", "We use only fresh local ingredients, ensuring that every dish leaving our kitchen tells a story of dedication. Come visit our space and let us surprise you."] },
         contacts: { title: "Make a Reservation", sub: "We are at R. António de Barros 68, Caldelas. We look forward to seeing you for an unforgettable meal.", hoursTitle: "Opening Hours", btnPhone: "Call Now", btnMap: "View Map", socialCta: "Follow us to keep up with all the news and daily moments.", hours: [{d:"Mon-Sat", t:"07am-8:30pm"},{d:"Sun", t:"07:30am-07:30pm"}] },
