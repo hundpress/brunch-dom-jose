@@ -68,10 +68,10 @@
       document.getElementById('social-cta').textContent = d.contacts.socialCta;
 
       document.getElementById('contact-pills').innerHTML = `
-        <a href="tel:253471226" class="px-8 py-4 bg-[var(--primary)] text-white rounded-full font-bold f-xs uppercase flex items-center gap-2">
+        <a href="tel:253471226" class="px-8 py-4 bg-[var(--primary)] text-white rounded-full font-bold f-xs uppercase flex items-center justify-center gap-2 text-center w-full sm:w-auto">
           <i data-lucide="phone" class="w-4 h-4"></i> ${d.contacts.btnPhone}
         </a>
-        <a href="https://maps.app.goo.gl/PEZtx8joMPiffjGYA" target="_blank" class="px-8 py-4 bg-white border border-orange-100 rounded-full font-bold f-xs uppercase flex items-center gap-2">
+        <a href="https://maps.app.goo.gl/PYqBNZkXFCboJncV7" target="_blank" class="px-8 py-4 bg-white border border-orange-100 rounded-full font-bold f-xs uppercase flex items-center justify-center gap-2 text-center w-full sm:w-auto">
           <i data-lucide="map-pin" class="w-4 h-4"></i> ${d.contacts.btnMap}
         </a>
       `;
@@ -116,16 +116,3 @@
       gsap.to("#nav", { opacity: 1, y: 0, duration: 1 });
       ScrollTrigger.batch(".reveal", { onEnter: b => gsap.to(b, { opacity: 1, y: 0, duration: 0.8, stagger: 0.1 }) });
     };
-
-    window.addEventListener('scroll', () => {
-        const indicator = document.getElementById('scroll-indicator');
-        if(indicator) {
-          if(window.scrollY > 50) {
-            indicator.classList.add('opacity-0');
-            indicator.classList.remove('opacity-60');
-          } else {
-            indicator.classList.remove('opacity-0');
-            indicator.classList.add('opacity-60');
-          }
-        }
-      });
