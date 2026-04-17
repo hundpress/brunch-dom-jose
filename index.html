@@ -16,16 +16,24 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
 
   <nav id="nav">
-    <a href="#" class="flex items-center justify-center">
-      <div class="logo-container">
-        <img src="./images/logo.png" alt="Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full bg-orange-200 rounded-lg flex items-center justify-center text-[10px] font-black text-orange-800\'>LOGO</div>'">
-      </div>
-    </a>
+    <div class="flex items-center gap-4">
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-orange-950">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="#" class="flex items-center justify-center">
+        <div class="logo-container">
+          <img src="./images/logo.png" alt="Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full bg-orange-200 rounded-lg flex items-center justify-center text-[10px] font-black text-orange-800\'>LOGO</div>'">
+        </div>
+      </a>
+    </div>
+    
     <ul class="nav-links hidden md:flex" id="nav-list"></ul>
+
     <div class="flex items-center justify-end gap-4">
       <div class="relative hidden md:block">
         <button id="lang-btn" class="flex items-center gap-2 rounded-full border border-orange-100 bg-white px-3 py-1.5 f-xs font-bold text-orange-900 hover:bg-orange-50 transition-all uppercase">
@@ -33,7 +41,7 @@
         </button>
         <div id="lang-menu" class="hidden absolute right-0 mt-2 w-40 rounded-xl overflow-hidden bg-white shadow-2xl border border-orange-50 z-50"></div>
       </div>
-      <a href="tel:253471226" class="cta-button hidden md:inline-flex gap-2" id="cta-nav">
+      <a href="tel:253471226" class="cta-button inline-flex gap-2" id="cta-nav">
         <i data-lucide="phone" class="w-3.5 h-3.5"></i> <span id="cta-nav-text"></span>
       </a>
     </div>
@@ -57,7 +65,7 @@
       </div>
     </div>
     <div id="scroll-indicator" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary opacity-60 transition-opacity duration-500 pointer-events-none">
-      <i class="fa-solid fa-chevron-down animate-bounce text-2xl"></i>
+      <i class="fa-solid fa-chevron-down animate-bounce text-2xl text-[var(--primary)]"></i>
     </div>
   </section>
 
@@ -76,7 +84,7 @@
   <section id="about">
     <div class="max-w-[1100px] w-full mx-auto flex flex-col items-center reveal">
       <div class="about-image-placeholder">
-        <img src="./images/restourant.webp" alt="Restaurant">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2000" alt="Restaurant">
       </div>
       <h2 class="overline-text mb-4" id="about-mini"></h2>
       <h3 class="f-xl font-bold text-orange-950 mb-8 leading-tight italic" id="about-intro"></h3>
